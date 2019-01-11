@@ -13,8 +13,8 @@
             <div>
               <h4>You are buying:</h4>
               <ul>
-                <li>Book Title: <em>{{ book.title }}</em></li>
-                <li>Amount: <em>${{ book.price }}</em></li>
+                <li>todo todo: <em>{{ todo.todo }}</em></li>
+                <li>Amount: <em>${{ todo.price }}</em></li>
               </ul>
             </div>
             <div>
@@ -80,8 +80,8 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      book: {
-        title: '',
+      todo: {
+        todo: '',
         author: '',
         read: [],
         price: '',
@@ -97,11 +97,11 @@ export default {
     };
   },
   methods: {
-    getBook() {
-      const path = `http://localhost:5000/books/${this.$route.params.id}`;
+    gettodo() {
+      const path = `http://localhost:5000/TODO/${this.$route.params.id}`;
       axios.get(path)
         .then((res) => {
-          this.book = res.data.book;
+          this.todo = res.data.todo;
         })
         .catch((error) => {
           // eslint-disable-next-line
@@ -138,7 +138,7 @@ export default {
           console.error(response);
         } else {
           const payload = {
-            book: this.book,
+            todo: this.todo,
             token: response.id,
           };
           const path = 'http://localhost:5000/charge';
@@ -155,7 +155,7 @@ export default {
     },
   },
   created() {
-    this.getBook();
+    this.gettodo();
   },
 };
 </script>

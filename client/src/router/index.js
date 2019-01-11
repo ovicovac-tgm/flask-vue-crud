@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Ping from '@/components/Ping';
-import Books from '@/components/Books';
+import TODO from '@/components/TODO';
 import Order from '@/components/Order';
 import OrderComplete from '@/components/OrderComplete';
 
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Books',
-      component: Books,
+      name: 'TODO',
+      component: TODO,
     },
     {
       path: '/order/:id',
