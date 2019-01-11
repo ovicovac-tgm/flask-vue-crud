@@ -129,4 +129,4 @@ def remove_book(book_id):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0', port=8080)
