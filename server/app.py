@@ -16,27 +16,12 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app)
 
-BOOKS = [
+TODO = [
     {
-        'id': uuid.uuid4().hex,
-        'title': 'On the Road',
-        'author': 'Jack Kerouac',
-        'read': True,
-        'price': '19.99'
-    },
-    {
-        'id': uuid.uuid4().hex,
-        'title': 'Harry Potter and the Philosopher\'s Stone',
-        'author': 'J. K. Rowling',
-        'read': False,
-        'price': '9.99'
-    },
-    {
-        'id': uuid.uuid4().hex,
-        'title': 'Green Eggs and Ham',
-        'author': 'Dr. Seuss',
-        'read': True,
-        'price': '3.99'
+        'id': 1,
+        'todo': '',
+        'assignee': '',
+        'done': True,
     }
 ]
 
