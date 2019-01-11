@@ -1,3 +1,15 @@
+commit f932f2acb348e996200a4ec9d65c3ab7a355e2da
+Author: ovicovac <ovicovac@student.tgm.ac.at>
+Date:   Fri Jan 11 14:10:33 2019 +0100
+
+    +created Todos.vue
+
+ .idea/workspace.xml                            | 166 +++++++++++--------------
+ client/src/components/{Books.vue => Todos.vue} |   0
+ crud.log                                       | 145 +++++++++++++++++++++
+ spa.log                                        | 145 +++++++++++++++++++++
+ 4 files changed, 366 insertions(+), 90 deletions(-)
+
 commit f3244b5e554e2a09627adbbd94eea36b9703e27c
 Author: ovicovac <ovicovac@student.tgm.ac.at>
 Date:   Fri Jan 11 13:36:34 2019 +0100
