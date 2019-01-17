@@ -1,3 +1,15 @@
+commit cac9702e83a5e6c498116649c68cfff54502b0c0
+Author: ovicovac <ovicovac@student.tgm.ac.at>
+Date:   Fri Jan 11 14:16:28 2019 +0100
+
+    added report md
+
+ .idea/workspace.xml | 32 +++++++++++++++++++++++++++++---
+ Report.md           |  5 +++++
+ crud.log            | 12 ++++++++++++
+ spa.log             | 12 ++++++++++++
+ 4 files changed, 58 insertions(+), 3 deletions(-)
+
 commit f932f2acb348e996200a4ec9d65c3ab7a355e2da
 Author: ovicovac <ovicovac@student.tgm.ac.at>
 Date:   Fri Jan 11 14:10:33 2019 +0100
