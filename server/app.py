@@ -73,33 +73,6 @@ def single_todo(todo_id):
         response_object['message'] = 'todo removed!'
     return jsonify(response_object)
 
-
-@app.route('/charge', methods=['POST'])
-def create_charge():
-    post_data = request.get_json()
-    stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
-    charge = stripe.Charge.create(
-        currency='usd',
-        card=post_data.get('token'),
-        description=post_data.get('todo')['todo']
-    )
-    response_object = {
-        'status': 'success',
-        'charge': charge
-    }
-    return jsonify(response_object), 200
-
-
-@app.route('/charge/<charge_id>')
-def get_charge(charge_id):
-    stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
-    response_object = {
-        'status': 'success',
-        'charge': stripe.Charge.retrieve(charge_id)
-    }
-    return jsonify(response_object), 200
-
-
 def remove_todo(todo_id):
     for todo in TODO:
         if todo['id'] == todo_id:
