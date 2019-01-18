@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Ping from '@/components/Ping';
-import TODO from '@/components/TODO';
+import Todos from '@/components/Todos';
 import Order from '@/components/Order';
 import OrderComplete from '@/components/OrderComplete';
 
@@ -11,24 +11,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TODO',
-      component: TODO,
-    },
-    {
-      path: '/order/:id',
-      name: 'Order',
-      component: Order,
-    },
-    {
-      path: '/complete/:id',
-      name: 'OrderComplete',
-      component: OrderComplete,
-    },
-    {
-      path: '/ping',
-      name: 'Ping',
-      component: Ping,
-    },
+      name: 'Todo',
+      component: Todos,
+    }
   ],
   mode: 'hash',
 });
